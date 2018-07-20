@@ -1,0 +1,14 @@
+!!!
+
+%html
+    -Producto.tipos.sort.each do |tipo|
+        %div.tipo{ :id => tipo}
+            %h3= tipo.capitalize
+            -@productos.each do |pr|
+                - if pr.tipo.eql? tipo
+                    %div.producto{:id => pr.nombre}
+                        %p.nombre= pr.nombre
+                        %p.precio= pr.precio_actual
+                        %p.estado= pr.estado
+            
+    
