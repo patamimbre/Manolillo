@@ -13,4 +13,7 @@ class App < Sinatra::Application
     haml :bolsa
   end
   
+  get '/add' do 
+  	
+  end
 end
