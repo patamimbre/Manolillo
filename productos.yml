@@ -239,9 +239,9 @@
   precision: 2
   id: 47018531593360
   minimo: 2.5
-  maximo: 3.3
-  precio_actual: 2.59
-  precio_anterior: 2.63
+  maximo: 3.6
+  precio_actual: 2.98
+  precio_anterior: 2.59
 - !ruby/object:Producto
   nombre: Brugal
   tipo: ron

@@ -36,13 +36,12 @@ class App < Sinatra::Application
   put '/producto/:id' do
     @producto = @productos.buscar(params[:id])
     @producto.actualiza(
-      Producto.new(
         params[:nombre],
         params[:tipo],
         params[:minimo],
         params[:maximo]
-    ))
-    ap @producto
+    )
+    @productos.guardar
     #redirect to("/")
   end
 

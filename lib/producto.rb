@@ -12,11 +12,13 @@ class Producto
         @tipo = tipo.downcase
         @precision = precision
         @id = self.object_id.to_s
-        setPrecio(minimo,maximo)
+        setPrecio(Float(minimo),Float(maximo))
     end
 
-    def actualiza(producto)
-        self.replace producto
+    def actualiza(nombre, tipo, minimo, maximo)
+        @nombre = nombre
+        @tipo = tipo
+        setPrecio(Float(minimo),Float(maximo))
     end
 
     # Genera un precio aleatorio dentro del rango
