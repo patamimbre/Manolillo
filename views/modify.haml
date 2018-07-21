@@ -10,4 +10,4 @@
 			- @productos.tipos.reject{|t| t.eql? @producto.tipo}.each do |tip|
 				%option{:value=>tip}= tip.capitalize
 
-		%input.btn.btn-primary{:type=>"submit",:name=>"submit",:value=>"Añadir"}
+		%input.btn.btn-primary{:type=>"submit",:name=>"submit",:value=>"Guardar"}

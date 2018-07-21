@@ -33,6 +33,16 @@ class App < Sinatra::Application
     haml :modify
   end
 
+  post '/add' do
+    @productos.add( Producto.new(
+      params[:nombre],
+      params[:tipo],
+      params[:minimo],
+      params[:maximo]
+    ))
+    @productos.guardar
+  end
+
   put '/producto/:id' do
     @producto = @productos.buscar(params[:id])
     @producto.actualiza(
@@ -44,5 +54,6 @@ class App < Sinatra::Application
     @productos.guardar
     #redirect to("/")
   end
+  
 
 end

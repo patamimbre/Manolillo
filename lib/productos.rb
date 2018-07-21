@@ -37,9 +37,9 @@ class Productos
         guardar
     end
 
-    def modificar_producto(producto)
-        
-    end 
+    def add(producto)
+        @array_productos << producto
+    end
 
 
 end
