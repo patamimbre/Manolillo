@@ -11,3 +11,6 @@ gem "foreman"
 
 gem "thin"
 gem "haml"
+
+gem "awesome_print"
+gem "pry"

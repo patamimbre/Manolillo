@@ -2,21 +2,21 @@ require 'yaml'
 
 class Producto
 
-    @tipos = ["cerveza", "tinto", "racion", "ginebra", "ron", "whisky", "cocktail", "chismaillo"]
-
     # getters
-    attr_reader :nombre, :tipo, :precio_actual, :estado, :precio_anterior, :tipos
+    attr_reader :id, :nombre, :tipo, :precio_actual, :estado, :precio_anterior, :minimo, :maximo
 
-    class << self
-        attr_reader :tipos
-    end
 
     # constructor
     def initialize(nombre, tipo, minimo, maximo, precision=2)
         @nombre = nombre
         @tipo = tipo.downcase
         @precision = precision
+        @id = self.object_id.to_s
         setPrecio(minimo,maximo)
+    end
+
+    def actualiza(producto)
+        self.replace producto
     end
 
     # Genera un precio aleatorio dentro del rango

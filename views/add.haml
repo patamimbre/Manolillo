@@ -1,11 +1,10 @@
+
 %div.wrap
 	%form{:method=>"post", :onsubmit=>"return validar();"}
 		%input.form-control#nombre{:type=>"text",:name=>"nombre", :placeholder=>"Nombre"}
-		%input.form-control#preciomax{:type=>"text",:name=>"preciomax", :placeholder=>"Precio Máximo"}
-		%input.form-control#preciomin{:type=>"text",:name=>"preciomin", :placeholder=>"Precio Mínimo"}
-		%select.select#tipos{:name=>"tipos"}
-			%option{:value=>""}= "Selecciona el tipo"
+		%input.form-control#preciomin{:type=>"text",:name=>"minimo", :placeholder=>"Precio Mínimo"}
+		%input.form-control#preciomax{:type=>"text",:name=>"maximo", :placeholder=>"Precio Máximo"}
+		%select.select#tipos{:name=>"tipo"}
 			- @productos.tipos.each do |tip| 
-				%option{:value=>tip}= tip
+				%option{:value=>tip}= tip.capitalize
 		%input.btn.btn-primary{:type=>"submit",:name=>"submit",:value=>"Añadir"}
-	= javascript_include_tag "validar.js"

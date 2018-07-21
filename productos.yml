@@ -3,335 +3,377 @@
   nombre: Cruzcampo 1/3
   tipo: cerveza
   precision: 2
+  id: 47018532234360
   minimo: 1.1
   maximo: 1.7
-  precio_actual: 1.64
-  precio_anterior: 1.28
+  precio_actual: 1.46
+  precio_anterior: 1.15
 - !ruby/object:Producto
   nombre: Heineken 1/3
   tipo: cerveza
   precision: 2
+  id: 47018532234140
   minimo: 1.1
   maximo: 1.7
-  precio_actual: 1.68
-  precio_anterior: 1.34
+  precio_actual: 1.38
+  precio_anterior: 1.15
 - !ruby/object:Producto
   nombre: Heineken 0,0 1/3
   tipo: cerveza
   precision: 2
+  id: 47018532233900
   minimo: 1.2
   maximo: 1.8
-  precio_actual: 1.28
-  precio_anterior: 1.22
+  precio_actual: 1.45
+  precio_anterior: 1.37
 - !ruby/object:Producto
   nombre: Amstel 1/3
   tipo: cerveza
   precision: 2
+  id: 47018532233820
   minimo: 1.1
   maximo: 1.7
-  precio_actual: 1.44
-  precio_anterior: 1.18
+  precio_actual: 1.3
+  precio_anterior: 1.47
 - !ruby/object:Producto
   nombre: Cruzcampo 1/5
   tipo: cerveza
   precision: 2
+  id: 47018532233580
   minimo: 0.7
   maximo: 1.2
-  precio_actual: 1.1
-  precio_anterior: 0.82
+  precio_actual: 0.9
+  precio_anterior: 0.91
 - !ruby/object:Producto
   nombre: Jarra
   tipo: cerveza
   precision: 2
+  id: 47018532233440
   minimo: 1.5
   maximo: 2.2
-  precio_actual: 1.99
-  precio_anterior: 2.01
+  precio_actual: 1.67
+  precio_anterior: 2.06
 - !ruby/object:Producto
   nombre: Tubo
   tipo: cerveza
   precision: 2
+  id: 47018532233300
   minimo: 0.9
   maximo: 1.5
-  precio_actual: 1.45
-  precio_anterior: 1.02
+  precio_actual: 1.15
+  precio_anterior: 1.38
 - !ruby/object:Producto
-  nombre: Caña
+  nombre: 3.3Caña
   tipo: cerveza
   precision: 2
+  id: 47018532233220
   minimo: 0.7
   maximo: 1.1
-  precio_actual: 0.83
-  precio_anterior: 1.03
+  precio_actual: 0.93
+  precio_anterior: 0.73
 - !ruby/object:Producto
   nombre: Tinto casero vaso ancho
   tipo: tinto
   precision: 2
+  id: 47018531610300
   minimo: 1.2
   maximo: 1.7
-  precio_actual: 1.26
-  precio_anterior: 1.31
+  precio_actual: 1.29
+  precio_anterior: 1.22
 - !ruby/object:Producto
   nombre: Tinto casero tubo
   tipo: tinto
   precision: 2
+  id: 47018531609380
   minimo: 0.9
   maximo: 1.3
-  precio_actual: 1.2
-  precio_anterior: 1.12
+  precio_actual: 1.25
+  precio_anterior: 1.25
 - !ruby/object:Producto
   nombre: Rioja
   tipo: tinto
   precision: 2
+  id: 47018531608820
   minimo: 1.1
   maximo: 1.8
-  precio_actual: 1.6
-  precio_anterior: 1.72
+  precio_actual: 1.59
+  precio_anterior: 1.52
 - !ruby/object:Producto
   nombre: Espumoso
   tipo: tinto
   precision: 2
+  id: 47018531608340
   minimo: 1.2
   maximo: 1.8
-  precio_actual: 1.39
-  precio_anterior: 1.75
+  precio_actual: 1.73
+  precio_anterior: 1.49
 - !ruby/object:Producto
   nombre: Rueda
   tipo: tinto
   precision: 2
+  id: 47018531607700
   minimo: 1.2
   maximo: 1.8
-  precio_actual: 1.78
-  precio_anterior: 1.52
+  precio_actual: 1.44
+  precio_anterior: 1.76
 - !ruby/object:Producto
   nombre: Mcnolo
   tipo: racion
   precision: 2
+  id: 47018531607180
   minimo: 3.5
   maximo: 4.1
-  precio_actual: 4.01
-  precio_anterior: 4.01
+  precio_actual: 3.87
+  precio_anterior: 3.59
 - !ruby/object:Producto
   nombre: Tender
   tipo: racion
   precision: 2
+  id: 47018531606900
   minimo: 5.2
   maximo: 6
-  precio_actual: 5.81
-  precio_anterior: 5.64
+  precio_actual: 5.32
+  precio_anterior: 5.65
 - !ruby/object:Producto
   nombre: Lágrimas
   tipo: racion
   precision: 2
+  id: 47018531606460
   minimo: 5
   maximo: 5.8
-  precio_actual: 5.37
-  precio_anterior: 5.7
+  precio_actual: 5.46
+  precio_anterior: 5.17
 - !ruby/object:Producto
   nombre: Tex y kebab
   tipo: racion
   precision: 2
+  id: 47018531605900
   minimo: 3.5
   maximo: 4.1
-  precio_actual: 3.55
-  precio_anterior: 4.06
+  precio_actual: 3.99
+  precio_anterior: 3.99
 - !ruby/object:Producto
   nombre: Montadito
   tipo: racion
   precision: 2
+  id: 47018531605220
   minimo: 1.1
   maximo: 1.6
-  precio_actual: 1.6
-  precio_anterior: 1.5
+  precio_actual: 1.51
+  precio_anterior: 1.35
 - !ruby/object:Producto
   nombre: Croquetas
   tipo: racion
   precision: 2
+  id: 47018531603140
   minimo: 5
   maximo: 5.7
-  precio_actual: 5.31
-  precio_anterior: 5.41
+  precio_actual: 5.47
+  precio_anterior: 5.46
 - !ruby/object:Producto
   nombre: Alitas
   tipo: racion
   precision: 2
+  id: 47018531602520
   minimo: 5
   maximo: 5.7
-  precio_actual: 5.56
-  precio_anterior: 5.65
+  precio_actual: 5.66
+  precio_anterior: 5.5
 - !ruby/object:Producto
   nombre: Flamenquines
   tipo: racion
   precision: 2
+  id: 47018531601540
   minimo: 3.8
   maximo: 4.2
-  precio_actual: 4.09
-  precio_anterior: 3.93
+  precio_actual: 4.1
+  precio_anterior: 4.1
 - !ruby/object:Producto
   nombre: Bravas
   tipo: racion
   precision: 2
+  id: 47018531600460
   minimo: 3.3
   maximo: 3.7
-  precio_actual: 3.46
-  precio_anterior: 3.37
+  precio_actual: 3.61
+  precio_anterior: 3.32
 - !ruby/object:Producto
   nombre: Larios 12
   tipo: ginebra
   precision: 2
+  id: 47018531599940
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 2.82
-  precio_anterior: 2.57
+  precio_actual: 3.05
+  precio_anterior: 3.01
 - !ruby/object:Producto
   nombre: Larios
   tipo: ginebra
   precision: 2
+  id: 47018531596740
   minimo: 2.2
   maximo: 2.8
-  precio_actual: 2.53
-  precio_anterior: 2.72
+  precio_actual: 2.3
+  precio_anterior: 2.32
 - !ruby/object:Producto
   nombre: Beefeater
   tipo: ginebra
   precision: 2
+  id: 47018531595900
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 3.03
-  precio_anterior: 2.92
+  precio_actual: 2.91
+  precio_anterior: 3.24
 - !ruby/object:Producto
   nombre: Puerto de Indias
   tipo: ginebra
   precision: 2
+  id: 47018531594560
   minimo: 2.9
   maximo: 3.6
-  precio_actual: 3.18
-  precio_anterior: 3.11
+  precio_actual: 3.08
+  precio_anterior: 3.03
 - !ruby/object:Producto
   nombre: Barceló
   tipo: ron
   precision: 2
+  id: 47018531593360
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 2.7
-  precio_anterior: 3.11
+  precio_actual: 2.59
+  precio_anterior: 2.63
 - !ruby/object:Producto
   nombre: Brugal
   tipo: ron
   precision: 2
+  id: 47018531592360
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 2.67
-  precio_anterior: 2.77
+  precio_actual: 2.64
+  precio_anterior: 2.8
 - !ruby/object:Producto
   nombre: Areucas
   tipo: ron
   precision: 2
+  id: 47018531591200
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 2.67
-  precio_anterior: 3.25
+  precio_actual: 3.24
+  precio_anterior: 3.24
 - !ruby/object:Producto
   nombre: Cacique
   tipo: ron
   precision: 2
+  id: 47018531589740
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 2.54
-  precio_anterior: 2.91
+  precio_actual: 2.9
+  precio_anterior: 2.62
 - !ruby/object:Producto
   nombre: Ron Miel
   tipo: ron
   precision: 2
+  id: 47018531587120
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 3.15
-  precio_anterior: 3.04
+  precio_actual: 2.62
+  precio_anterior: 2.82
 - !ruby/object:Producto
   nombre: Negrita
   tipo: ron
   precision: 2
+  id: 47018531586000
   minimo: 2.2
   maximo: 2.8
-  precio_actual: 2.67
-  precio_anterior: 2.48
+  precio_actual: 2.52
+  precio_anterior: 2.72
 - !ruby/object:Producto
   nombre: JB
   tipo: whisky
   precision: 2
+  id: 47018531585140
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 3.03
-  precio_anterior: 3.21
+  precio_actual: 3.04
+  precio_anterior: 2.78
 - !ruby/object:Producto
   nombre: DYC 8
   tipo: whisky
   precision: 2
+  id: 47018531584680
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 3.28
-  precio_anterior: 2.97
+  precio_actual: 3.23
+  precio_anterior: 2.59
 - !ruby/object:Producto
   nombre: Ballantine
   tipo: whisky
   precision: 2
+  id: 47018531583960
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 3.05
-  precio_anterior: 2.99
+  precio_actual: 2.94
+  precio_anterior: 2.58
 - !ruby/object:Producto
   nombre: White Label
   tipo: whisky
   precision: 2
+  id: 47018531582860
   minimo: 2.5
   maximo: 3.3
-  precio_actual: 2.68
-  precio_anterior: 3.17
+  precio_actual: 2.95
+  precio_anterior: 3.2
 - !ruby/object:Producto
   nombre: Doble V
   tipo: whisky
   precision: 2
+  id: 47018531582180
   minimo: 2.2
   maximo: 2.8
-  precio_actual: 2.33
-  precio_anterior: 2.49
+  precio_actual: 2.47
+  precio_anterior: 2.27
 - !ruby/object:Producto
   nombre: Piña colada
   tipo: cocktail
   precision: 2
+  id: 47018531581100
   minimo: 2.9
   maximo: 3.8
-  precio_actual: 3.68
+  precio_actual: 3.33
   precio_anterior: 3.31
 - !ruby/object:Producto
   nombre: Daikiri
   tipo: cocktail
   precision: 2
+  id: 47018531580380
   minimo: 2.9
   maximo: 3.8
-  precio_actual: 3.33
-  precio_anterior: 3.45
+  precio_actual: 3.74
+  precio_anterior: 2.97
 - !ruby/object:Producto
   nombre: Mojito
   tipo: cocktail
   precision: 2
+  id: 47018531580000
   minimo: 2.9
   maximo: 3.8
-  precio_actual: 3.08
-  precio_anterior: 3.27
+  precio_actual: 2.96
+  precio_anterior: 3.62
 - !ruby/object:Producto
   nombre: En tubo
   tipo: chismaillo
   precision: 2
+  id: 47018531578020
   minimo: 2.0
   maximo: 2.4
-  precio_actual: 2.34
-  precio_anterior: 2.37
+  precio_actual: 2.09
+  precio_anterior: 2.16
 - !ruby/object:Producto
   nombre: En vaso ancho
   tipo: chismaillo
   precision: 2
+  id: 47018531577220
   minimo: 2.3
   maximo: 2.8
-  precio_actual: 2.58
-  precio_anterior: 2.34
+  precio_actual: 2.67
+  precio_anterior: 2.59

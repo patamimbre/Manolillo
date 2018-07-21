@@ -1,0 +1,13 @@
+
+%div.wrap
+	%form{action:"/producto/#{@producto.id}", method:"post", onsubmit:"return validar();"}
+		%input{type:"hidden", name:"_method", value:"PUT"}
+		%input.form-control#nombre{type:"text", name:"nombre", value:@producto.nombre}
+		%input.form-control#preciomin{type:"text", name:"minimo", value:@producto.minimo}
+		%input.form-control#preciomax{type:"text", name:"maximo", value:@producto.maximo}
+		%select.select#tipos{name:"tipo"}
+			%option{:value=>@producto.tipo, selected: "selected"}= @producto.tipo.capitalize
+			- @productos.tipos.reject{|t| t.eql? @producto.tipo}.each do |tip|
+				%option{:value=>tip}= tip.capitalize
+
+		%input.btn.btn-primary{:type=>"submit",:name=>"submit",:value=>"Añadir"}

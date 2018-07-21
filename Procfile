@@ -1,2 +1,2 @@
-web: bundle exec thin -R config.ru start -p $PORT
+web: bundle exec thin -R config.ru start
 worker: bundle exec ruby worker.rb
