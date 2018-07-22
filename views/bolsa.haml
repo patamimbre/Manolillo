@@ -1,14 +1,24 @@
-!!!
 
-%html
-    -@productos.tipos.each do |tipo|
-        %div.tipo{ :id => tipo}
-            %h3= tipo.capitalize
-            -@productos.productos.each do |pr|
-                - if pr.tipo.eql? tipo
-                    %div.producto{:id => pr.nombre}
-                        %p.nombre= pr.nombre
-                        %p.precio= pr.precio_actual
-                        %p.estado= pr.estado
-            
-    
+-@productos.tipos.each do |tipo|
+    %div.tipo{ :id => tipo}
+        %h3= tipo.capitalize
+        -@productos.productos.each do |pr|
+            - if pr.tipo.eql? tipo
+                %div.producto{:id => pr.nombre}
+                    %p.nombre= pr.nombre
+                    %p.precio= pr.precio_actual
+                    %p.estado= pr.estado
+
+%form.minimos{action: "/bolsa", method:"post"}
+    %input{type:"hidden", name:"espera", value:@espera}
+    %input{type:"submit", name:"caida", value:true}
+
+%form.reload{action: "/bolsa", method:"post"}
+    %input{type:"hidden", name:"espera", value:@espera}
+
+%p= @espera
+
+:javascript
+    setInterval(function() {
+        $(".reload").submit()
+    }, #{@espera});

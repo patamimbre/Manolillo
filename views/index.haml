@@ -1,0 +1,7 @@
+%div.wrap
+    %form{action:"/bolsa", method:"post"}
+        %div.tiempo
+            %p= "Minutos entre actualizaciones (10-360)"
+            %input.form-control#espera{type:"number", name:"espera", min:"10", max:"360", value:"30"}
+        %input.btn.btn-primary{:type=>"submit",:name=>"submit",:value=>"Comenzar"}
+    %a.btn.btn-primary{href:"/conf"}= "Editar productos"

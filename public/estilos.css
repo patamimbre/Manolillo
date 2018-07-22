@@ -127,3 +127,7 @@ input.form-control {
     background: white;
     color: black;
 }
+
+form.reload {
+    display: none;
+}

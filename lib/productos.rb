@@ -32,13 +32,21 @@ class Productos
         @array_productos.select {|x| x.tipo.eql? un_tipo}
     end
 
-    def eliminar_producto(producto)
-        @array_productos.reject! {|x| x.id.eql? producto.id}
+    def delete(id)
+        @array_productos.reject! {|x| x.id.to_s.eql? id.to_s}
         guardar
     end
 
     def add(producto)
         @array_productos << producto
+    end
+
+    def precios_minimos
+        @array_productos.each {|pr| pr.setPrecioMinimo}
+    end
+
+    def genera_precios
+        @array_productos.each {|pr| pr.generaPrecio}
     end
 
 

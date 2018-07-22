@@ -1,10 +1,11 @@
-%div.wrap
-    %div#tabla
-        - @productos.each do |pr|
-            %div.fila
-                %label.nombre= pr.nombre
-                %label.tipo= pr.tipo
-                %label.minimo= pr.minimo
-                %label.minimo= pr.maximo
-                %a{:href=>"/edit/#{pr.id}" }= "Editar"
-                %a{}= "Eliminar"
+%div#tabla
+    - @productos.productos.each do |pr|
+        %div.fila
+            %label.nombre= pr.nombre
+            %label.tipo= pr.tipo
+            %label.minimo= pr.minimo
+            %label.minimo= pr.maximo
+            %label
+                %a{:href=>"/modify/#{pr.id}" }= "Editar"
+            %label
+                %a{:href=>"/delete/#{pr.id}"}= "Eliminar"
