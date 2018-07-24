@@ -1,6 +1,6 @@
 
 %div.wrap
-	%form{action:"/producto/#{@producto.id}", method:"post", onsubmit:"return validar();"}
+	%form.producto{action:"/producto/#{@producto.id}", method:"post", onsubmit:"return validar();"}
 		%input{type:"hidden", name:"_method", value:"PUT"}
 		%input.form-control#nombre{type:"text", name:"nombre", value:@producto.nombre}
 		%input.form-control#preciomin{type:"text", name:"minimo", value:@producto.minimo}

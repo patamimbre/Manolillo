@@ -60,6 +60,14 @@ class Producto
         self.new(data[:nombre], data[:tipo], data[:precio_minimo], data[:precio_maximo])
     end
 
+    def crecimiento
+        if Float(estado).positive?
+            'sube'
+        else
+            'baja'
+        end
+    end
+
     private
 
     # Establece el rango de precios y genera un precio

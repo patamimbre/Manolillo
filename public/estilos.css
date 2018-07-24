@@ -18,7 +18,7 @@ body {
     margin: auto;
 }
 
-form {
+form.producto {
     width: 100%;
     margin: 20px 0;
     padding: 20px;
@@ -28,8 +28,8 @@ form {
     border-top: 4px solid #536DFE;
 }
 
-form input[type="text"],
-form textarea {
+form.producto input[type="text"],
+form.producto textarea {
     border: 1px solid #536DFE;
     border-radius: 2px;
     padding: 16px;
@@ -41,8 +41,8 @@ form textarea {
     color: #141938;
 }
 
-form input[type="text"]:focus,
-form textarea:focus {
+form.producto input[type="text"]:focus,
+form.producto textarea:focus {
     border: 2px solid #3F51B5;
     padding: 15px;
 }
@@ -128,6 +128,41 @@ input.form-control {
     color: black;
 }
 
-form.reload {
-    display: none;
+.principal.row {
+    background: #2E3133;
+    color: white;
+    position: relative;
+}
+
+div.col-3 {
+    padding: 1.5rem;
+}
+
+div.tipo {
+    padding-bottom: 1.5rem;
+}
+
+.principal .botones {
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+}
+
+div.baja {
+    color: #e51400;
+}
+
+div.sube {
+    color: #60a917;
+}
+
+i.fas {
+    position: relative;
+    top: 0.4rem;
+}
+
+.btn {
+    height: 5rem;
+    width: 15rem;
+    text-decoration: none;
 }

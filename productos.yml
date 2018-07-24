@@ -118,7 +118,7 @@
   precio_anterior: 1.76
 - !ruby/object:Producto
   nombre: Mcnolo
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531607180
   minimo: 3.5
@@ -127,7 +127,7 @@
   precio_anterior: 3.59
 - !ruby/object:Producto
   nombre: Tender
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531606900
   minimo: 5.2
@@ -136,7 +136,7 @@
   precio_anterior: 5.65
 - !ruby/object:Producto
   nombre: Lágrimas
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531606460
   minimo: 5
@@ -145,7 +145,7 @@
   precio_anterior: 5.17
 - !ruby/object:Producto
   nombre: Tex y kebab
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531605900
   minimo: 3.5
@@ -154,7 +154,7 @@
   precio_anterior: 3.99
 - !ruby/object:Producto
   nombre: Montadito
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531605220
   minimo: 1.1
@@ -163,7 +163,7 @@
   precio_anterior: 1.35
 - !ruby/object:Producto
   nombre: Croquetas
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531603140
   minimo: 5
@@ -172,7 +172,7 @@
   precio_anterior: 5.46
 - !ruby/object:Producto
   nombre: Alitas
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531602520
   minimo: 5
@@ -181,7 +181,7 @@
   precio_anterior: 5.5
 - !ruby/object:Producto
   nombre: Flamenquines
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531601540
   minimo: 3.8
@@ -190,7 +190,7 @@
   precio_anterior: 4.1
 - !ruby/object:Producto
   nombre: Bravas
-  tipo: racion
+  tipo: ración
   precision: 2
   id: 47018531600460
   minimo: 3.3

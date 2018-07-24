@@ -1,22 +1,28 @@
 
--@productos.tipos.each do |tipo|
-    %div.tipo{ :id => tipo}
-        %h3= tipo.capitalize
-        -@productos.productos.each do |pr|
-            - if pr.tipo.eql? tipo
-                %div.producto{:id => pr.nombre}
-                    %p.nombre= pr.nombre
-                    %p.precio= pr.precio_actual
-                    %p.estado= pr.estado
+%div.principal.row.full-screen
+    -@productos.tipos.in_groups_of(2).each do |group|
+        %div.col-3
+            - group.each do |tipo|
+                %div.tipo{ :id => tipo}
+                    %h3= tipo.capitalize
+                    -@productos.productos.each do |pr|
+                        - if pr.tipo.eql? tipo
+                            %div.producto.row{:id => pr.nombre, :class=>pr.crecimiento}
+                                %p.col-7.nombre= pr.nombre
+                                %p.col-3.precio= pr.precio_actual.to_s + '€'
+                                %p.col-1.estado= pr.estado
+                                - if Float(pr.estado).positive?
+                                    %i.col-1.fas.fa-arrow-alt-circle-up
+                                - else 
+                                    %i.col-1.fas.fa-arrow-alt-circle-down
+    %div.botones
+        %form.minimos{action: "/bolsa", method:"post"}
+            %input{type:"hidden", name:"espera", value:@espera}
+            %button{type:"submit", name:"caida", value:true}="Bancarrota"
 
-%form.minimos{action: "/bolsa", method:"post"}
-    %input{type:"hidden", name:"espera", value:@espera}
-    %input{type:"submit", name:"caida", value:true}
-
-%form.reload{action: "/bolsa", method:"post"}
-    %input{type:"hidden", name:"espera", value:@espera}
-
-%p= @espera
+        %form.reload{action: "/bolsa", method:"post"}
+            %input{type:"hidden", name:"espera", value:@espera}
+            %button{type:"submit", name:"actualizar", value:true}="Actualizar"
 
 :javascript
     setInterval(function() {

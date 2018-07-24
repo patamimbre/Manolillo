@@ -1,6 +1,6 @@
 
 %div.wrap
-	%form{action:"/add", :method=>"post", :onsubmit=>"return validar();"}
+	%form.producto{action:"/add", :method=>"post", :onsubmit=>"return validar();"}
 		%input.form-control#nombre{:type=>"text",:name=>"nombre", :placeholder=>"Nombre"}
 		%input.form-control#preciomin{:type=>"text",:name=>"minimo", :placeholder=>"Precio Mínimo"}
 		%input.form-control#preciomax{:type=>"text",:name=>"maximo", :placeholder=>"Precio Máximo"}
