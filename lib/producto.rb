@@ -7,10 +7,9 @@ class Producto
 
 
     # constructor
-    def initialize(nombre, tipo, minimo, maximo, precision=2)
+    def initialize(nombre, tipo, minimo, maximo)
         @nombre = nombre
         @tipo = tipo.downcase
-        @precision = precision
         @id = self.object_id.to_s
         setPrecio(Float(minimo),Float(maximo))
     end
@@ -82,11 +81,23 @@ class Producto
         generaPrecio
     end
 
-    # Devuelve un float aleatorio en el rango dado
-    # con la precisión indicada (por defecto 2)
+    # Devuelve un float cuyos decimales son
+    # multiplos de 5
     def random(min,max)
-        r = rand * (max-min) + min
-        r.round(@precision)
+        ran = rand * (max-min) + min
+
+        decimal = ran.modulo(1).round(2)
+        decimal = decimal.to_s[2..-1].to_i
+        decimal = (decimal/5.0).round * 5
+
+        int = ran.to_i
+
+        if decimal == 100
+            decimal = 0
+            int += 1
+        end
+
+        Float(int.to_s+"."+decimal.to_s)
     end
 
 end
