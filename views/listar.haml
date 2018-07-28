@@ -1,11 +1,11 @@
 %div#tabla
     - @productos.productos.each do |pr|
-        %div.fila
-            %label.nombre= pr.nombre
-            %label.tipo= pr.tipo
-            %label.minimo= pr.minimo
-            %label.minimo= pr.maximo
-            %label
-                %a{:href=>"/modify/#{pr.id}" }= "Editar"
-            %label
-                %a{:href=>"/delete/#{pr.id}"}= "Eliminar"
+        %div.fila.row
+            %label.col-6.nombre= pr.nombre
+            %label.col-2.tipo= pr.tipo
+            %label.col-1.minimo= pr.minimo
+            %label.col-1.minimo= pr.maximo
+            %label.col-1
+                %a{:href=>"/modify/#{pr.id}", class:"fas fa-edit"}
+            %label.col-1
+                %a{:href=>"/delete/#{pr.id}", class:"fas fa-trash-alt" }

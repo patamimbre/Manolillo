@@ -1,3 +1,7 @@
 %div.wrap
-    %a.bnt.btn-primary{href:"/add"}= "Añadir producto"
+    %div.row.botones
+        %div.col.add.center
+            %a.bnt.btn-primary{href:"/add"}= "Añadir producto"
+        %div.col.volver.center
+            %a.bnt.btn-primary{href:"/"}= "Volver"
     != haml :"/listar"

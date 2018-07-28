@@ -134,8 +134,10 @@ input.form-control {
     position: relative;
 }
 
-div.col-3 {
+div.col-3,
+div.col-4 {
     padding: 1.5rem;
+    font-size: 1.8rem;
 }
 
 div.tipo {
@@ -143,9 +145,7 @@ div.tipo {
 }
 
 .principal .botones {
-    position: absolute;
-    bottom: 0.2rem;
-    right: 0.2rem;
+    display: none;
 }
 
 div.baja {
@@ -164,5 +164,9 @@ i.fas {
 .btn {
     height: 5rem;
     width: 15rem;
+    text-decoration: none;
+}
+
+.wrap a {
     text-decoration: none;
 }

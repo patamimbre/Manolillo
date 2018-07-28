@@ -1,7 +1,7 @@
 
-%div.principal.row.full-screen
-    -@productos.tipos.in_groups_of(2).each do |group|
-        %div.col-3
+%div.bolsa.principal.row.full-screen
+    -@tipos.in_groups_of(@gr,false).each do |group|
+        %div{class: "col-"+@tam_col.to_s}
             - group.each do |tipo|
                 %div.tipo{ :id => tipo}
                     %h3= tipo.capitalize

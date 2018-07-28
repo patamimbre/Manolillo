@@ -1,40 +1,10 @@
 require 'rubygems'
 require 'sinatra'
+require 'awesome_print'
 
 require_relative 'lib/productos.rb'
+require_relative 'lib/tools.rb'
 
-
-class Numeric
-  def milisegundos
-    self * 1000 * 60
-  end
-
-end
-
-class Array
-  def in_groups_of(number, fill_with = nil)
-    if number.to_i <= 0
-      raise ArgumentError,
-        "Group size must be a positive integer, was #{number.inspect}"
-    end
-
-    if fill_with == false
-      collection = self
-    else
-      # size % number gives how many extra we have;
-      # subtracting from number gives how many to add;
-      # modulo number ensures we don't add group of just fill.
-      padding = (number - size % number) % number
-      collection = dup.concat(Array.new(padding, fill_with))
-    end
-
-    if block_given?
-      collection.each_slice(number) { |slice| yield(slice) }
-    else
-      collection.each_slice(number).to_a
-    end
-  end
-end
 
 class App < Sinatra::Application
   
@@ -109,6 +79,21 @@ class App < Sinatra::Application
       @productos.precios_minimos 
     else
       @productos.genera_precios
+    end
+
+    case params[:pantalla]
+    when "racion"
+      @tipos = @productos.raciones
+      @tam_col = 4
+      @gr = 1
+    when "copas"
+      @tipos = @productos.copas
+      @tam_col = 4
+      @gr=2
+    else
+      @tipos = @productos.completo
+      @tam_col = 3
+      @gr=2
     end
 
     haml :bolsa

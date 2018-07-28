@@ -10,6 +10,18 @@ class Productos
         @array_productos.map{|x| x.tipo}.uniq
     end
 
+    def raciones
+        %(ración cerveza tinto).split(' ')
+    end
+
+    def copas
+        %(cerveza chismaillo ron cocktail ginebra whisky).split(' ')
+    end
+
+    def completo
+        %(cerveza cocktail ración chismaillo tinto whisky ron ginebra).split(' ')
+    end
+
     def productos 
         @array_productos
     end
