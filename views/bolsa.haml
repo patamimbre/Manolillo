@@ -16,15 +16,42 @@
                                 - else 
                                     %i.col-1.fas.fa-arrow-alt-circle-down
     %div.botones
-        %form.minimos{action: "/bolsa", method:"post"}
+        %form.minimos#minimos{action: "/bolsa", method:"post"}
             %input{type:"hidden", name:"espera", value:@espera}
             %button{type:"submit", name:"caida", value:true}="Bancarrota"
 
-        %form.reload{action: "/bolsa", method:"post"}
+        %form.reload#reload{action: "/bolsa", method:"post"}
             %input{type:"hidden", name:"espera", value:@espera}
             %button{type:"submit", name:"actualizar", value:true}="Actualizar"
+
+        %form.back#back{action: "/", method:"get"}
+            %button{type:"submit"}="Volver"
 
 :javascript
     setInterval(function() {
         $(".reload").submit()
     }, #{@espera});
+
+    document.onkeypress = function(evt) {
+        evt = evt || window.event;
+        var charCode = evt.keyCode || evt.which;
+        console.log(charCode);
+
+        //actualizar (tecla a)
+        if (charCode == 97){
+            console.log("reload");
+            document.getElementById('reload').submit();
+        }
+        //volver (tecla v)
+        else if (charCode == 118){
+            console.log("volver");
+            document.getElementById('back').submit();
+        }
+        //precios minimos (tecla m)
+        else if (charCode == 109){
+            console.log("minimo");
+            document.getElementById('minimos').submit();
+        }
+    };
+
+    

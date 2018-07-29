@@ -11,6 +11,11 @@ class App < Sinatra::Application
   # Allow the app to serve static files from the 'public' directory in :root
   enable :static
 
+  port = ENV['PORT'] || 8080
+  puts "STARTING SINATRA on port #{port}"
+  set :port, port
+  set :bind, '0.0.0.0'
+
   def initialize
     super()
     @productos = Productos.new
@@ -69,7 +74,7 @@ class App < Sinatra::Application
   # Muestra el estado de los productos
   post '/bolsa' do
     esp = Integer(params[:espera]) 
-    if esp < 360
+    if esp <= 180
       @espera = esp.milisegundos
     else 
       @espera = esp

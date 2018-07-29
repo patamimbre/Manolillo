@@ -1,8 +1,8 @@
 %div.wrap
     %form{action:"/bolsa", method:"post"}
         %div.tiempo.text-center
-            %p= "Minutos entre actualizaciones (10-360)"
-            %input.form-control#espera{type:"number", name:"espera", min:"10", max:"360", value:"30"}
+            %p= "Minutos entre actualizaciones (5-180)"
+            %input.form-control#espera{type:"number", name:"espera", min:"5", max:"180", value:"15"}
             %select.select{:name=>"pantalla"}
                 %option{:value=>"completo"}= "Completo" 
                 %option{:value=>"racion"}= "Raciones" 
