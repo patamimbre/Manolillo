@@ -15,4 +15,4 @@ COPY . $APP_HOME
 
 ENV PORT 8080
 EXPOSE 8080
-CMD ["bundle", "exec", "thin", "-R", "config.ru", "-p", "8080", "start"]
+CMD ["bundle", "exec", "thin", "-R", "config.ru", "-p", "8080", "-o", "'0.0.0.0'", "start"]
