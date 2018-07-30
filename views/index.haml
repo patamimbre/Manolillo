@@ -3,12 +3,13 @@
         %div.tiempo.text-center
             %p= "Minutos entre actualizaciones (5-180)"
             %input.form-control#espera{type:"number", name:"espera", min:"5", max:"180", value:"15"}
+            %input{type:"hidden", name:"tipo", value:"comenzar"}
             %select.select{:name=>"pantalla"}
                 %option{:value=>"completo"}= "Completo" 
                 %option{:value=>"racion"}= "Raciones" 
                 %option{:value=>"copas"}= "Guateque" 
         %div.center
-            %input.btn.btn-primary{:type=>"submit",:name=>"submit",:value=>"Comenzar"}
+            %button.btn.btn-primary{type:"submit", name:"submit"}="Comenzar"
     %div.center
         %a.vertical-align.btn.btn-primary{href:"/conf",}= "Editar productos"
         

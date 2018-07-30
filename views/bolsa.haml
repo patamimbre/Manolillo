@@ -18,14 +18,18 @@
     %div.botones
         %form.minimos#minimos{action: "/bolsa", method:"post"}
             %input{type:"hidden", name:"espera", value:@espera}
-            %button{type:"submit", name:"caida", value:true}="Bancarrota"
+            %input{type:"hidden", name:"pantalla", value:@pantalla}
+            %input{type:"hidden", name:"tipo", value:"bancarrota"}
+            %input{type:"submit", value:"Submit"}
 
         %form.reload#reload{action: "/bolsa", method:"post"}
             %input{type:"hidden", name:"espera", value:@espera}
-            %button{type:"submit", name:"actualizar", value:true}="Actualizar"
+            %input{type:"hidden", name:"pantalla", value:@pantalla}
+            %input{type:"hidden", name:"tipo", value:"actualizar"}
+            %input{type:"submit", value:"Submit"}
 
         %form.back#back{action: "/", method:"get"}
-            %button{type:"submit"}="Volver"
+            %button{type:"submit"}
 
 :javascript
     setInterval(function() {

@@ -80,13 +80,15 @@ class App < Sinatra::Application
       @espera = esp
     end
 
-    unless params[:caida].nil?
-      @productos.precios_minimos 
+    if params[:tipo].eql? "bancarrota"
+      @productos.precios_minimos
     else
-      @productos.genera_precios
+      @productos.genera_precios 
     end
 
-    case params[:pantalla]
+    @pantalla = params[:pantalla]
+
+    case @pantalla
     when "racion"
       @tipos = @productos.raciones
       @tam_col = 4
