@@ -137,7 +137,6 @@ input.form-control {
 div.col-3,
 div.col-4 {
     padding: 1.5rem;
-    font-size: 1.8rem;
 }
 
 div.tipo {
@@ -215,4 +214,8 @@ label a {
 
 .tiempo p {
     color: white;
+}
+
+div.producto p {
+    font-size: 2.9rem;
 }
