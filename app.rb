@@ -80,7 +80,9 @@ class App < Sinatra::Application
       @espera = esp
     end
 
-    if params[:tipo].eql? "bancarrota"
+    @tipo = params[:tipo]
+
+    if @tipo.eql? "bancarrota"
       @productos.precios_minimos
     else
       @productos.genera_precios 

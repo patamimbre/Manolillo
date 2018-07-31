@@ -3,6 +3,7 @@ class Numeric
         self * 1000 * 60
     end
 
+    
 end
 
 class Array

@@ -1,20 +1,25 @@
 
 %div.bolsa.principal.row.full-screen
-    -@tipos.in_groups_of(@gr,false).each do |group|
-        %div{class: "col-"+@tam_col.to_s}
-            - group.each do |tipo|
-                %div.tipo{ :id => tipo}
-                    %h3= tipo.capitalize
-                    -@productos.productos.each do |pr|
-                        - if pr.tipo.eql? tipo
-                            %div.producto.row{:id => pr.nombre, :class=>pr.crecimiento}
-                                %p.col-7.nombre= pr.nombre
-                                %p.col-3.precio= pr.precio_actual.to_s + '€'
-                                %p.col-1.estado= pr.estado
-                                - if Float(pr.estado).positive?
-                                    %i.col-1.fas.fa-arrow-alt-circle-up
-                                - else 
-                                    %i.col-1.fas.fa-arrow-alt-circle-down
+    %div.row
+        -@tipos.in_groups_of(@gr,false).each do |group|
+            %div{class: "col-"+@tam_col.to_s}
+                - group.each do |tipo|
+                    %div.tipo{ :id => tipo}
+                        %h3.text-center= tipo.capitalize
+                        -@productos.productos.each do |pr|
+                            - if pr.tipo.eql? tipo
+                                %div.producto.row{:id => pr.nombre, :class=>pr.crecimiento}
+                                    %p.col-7.nombre= pr.nombre
+                                    %p.col-3.precio= pr.precio_actual.to_s + '€'
+                                    %p.col-1.estado= pr.estado
+                                    - if Float(pr.estado).positive?
+                                        %i.col-1.fas.fa-arrow-alt-circle-up
+                                    - else 
+                                        %i.col-1.fas.fa-arrow-alt-circle-down                                   
+    
+    %div.contador
+        %p#tiempo.text-center
+            
     %div.botones
         %form.minimos#minimos{action: "/bolsa", method:"post"}
             %input{type:"hidden", name:"espera", value:@espera}
@@ -31,7 +36,36 @@
         %form.back#back{action: "/", method:"get"}
             %button{type:"submit"}
 
+        %audio#audio{controls:""}
+            %source{type:"audio/wav", src:"sirena.wav"}
+
+    - if @tipo.eql? "bancarrota"
+        :javascript
+            audio.play();
+
 :javascript
+
+    var audio = document.getElementById("audio");
+    var tmp = #{@espera}/1000;
+
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    var intervalo = setInterval(function(){
+        var number = document.getElementById('tiempo');
+        number.innerHTML = tmp;
+        tmp--;
+        
+        if(tmp == 0){
+            number.innerHTML = "!!!";
+        }
+    }, 1000);
+
+
+
+
     setInterval(function() {
         $(".reload").submit()
     }, #{@espera});
@@ -57,5 +91,4 @@
             document.getElementById('minimos').submit();
         }
     };
-
     
