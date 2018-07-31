@@ -233,4 +233,6 @@ div.contador {
     font-family: 'Orbitron', sans-serif;
 }
 
-#audio {}
+#audio {
+    style: none;
+}

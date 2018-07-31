@@ -1,5 +1,5 @@
 
-%div.bolsa.principal.row.full-screen
+%div.bolsa.principal#principal.row.full-screen
     %div.row
         -@tipos.in_groups_of(@gr,false).each do |group|
             %div{class: "col-"+@tam_col.to_s}
@@ -43,15 +43,11 @@
         :javascript
             audio.play();
 
+
 :javascript
 
     var audio = document.getElementById("audio");
     var tmp = #{@espera}/1000;
-
-
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
 
     var intervalo = setInterval(function(){
         var number = document.getElementById('tiempo');
